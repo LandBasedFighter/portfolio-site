@@ -1,0 +1,22 @@
+:root { 
+    --marta-blue : #0092d0;
+    --marta-yellow : #fdbe43;
+    --marta-orange : #ff7500;
+    --red-line : #EA0213;
+    --green-line : #00B05A;
+    --gold-line : #DDB312;
+    --blue-line : #0180C0;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+}
