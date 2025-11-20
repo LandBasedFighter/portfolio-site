@@ -5,21 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morgan Guinyard</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Morgan Guinyard" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
 </head>
 
 <body>
-    <div class="top-bar-container">
-        <img class="siteheader-logo" src="assets/Header SVG Light.svg" alt="MARTA Logo" height="90" />
-        <ul class=' top-bar-links'>
-            <li><a href="contact.html">Contact</a></li>
+    <nav class="top-bar-container">
+        <a href="#home">
+            <img class="siteheader-logo" src="assets/Header SVG Light.svg" alt="Morgan Guinyard Logo" height="90" />
+        </a>
+        <ul class="top-bar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
-
         </ul>
-    </div>
+    </nav>
 
-    <section class="train-hero">
-        <h1></h1>
+    <section id="home" class="train-hero">
+        <div class="hero-text">
+            <h1>hi! i'm morgan!</h1>
+            <h2>student / developer / writer</h2>
+            <h3><i>short on time? download my resume <a href="https://drive.google.com/file/d/19ofTGUeufJ1FlJ2bpOPQiq98SH430cnU/view?usp=sharing" target="_blank">here</a></i>.</h3>
+        </div>
+        <div class="hero-image">
+            <img src="assets/morgan-hero.jpg" alt="An image of morgan guinyard. she is standing in front of a snow-covered panther statue on georgia state university's campus" />
+        </div>
     </section>
+
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>I'm a CS student at Georgia State passionate about building useful, creative software that <i>feels</i> right. When I'm not coding or writing, I'm hiking, cooking, or exploring Atlanta one bike lane at a time. I'm also a Falcons fan, which means I've gotten really good at processing disappointment.</p>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+    </section>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
