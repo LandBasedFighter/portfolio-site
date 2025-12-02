@@ -2,12 +2,12 @@
     --marta-blue: #0092d0;
     --marta-yellow: #fdbe43;
     --marta-orange: #ff7500;
-    --red-line: #EA0213;
-    --green-line: #00B05A;
-    --gold-line: #DDB312;
-    --blue-line: #0180C0;
+    --red-line: #ea0213;
+    --green-line: #00b05a;
+    --gold-line: #ddb312;
+    --blue-line: #0180c0;
     --marta-black: #000000;
-    --marta-grey: #CCCCCC;
+    --marta-grey: #cccccc;
 }
 
 * {
@@ -18,7 +18,7 @@
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    color: var(--dark);
+    color: var(--marta-black);
 }
 
 .top-bar-container {
@@ -34,8 +34,8 @@ body {
     overflow: hidden;
 }
 
-.train-hero::after,
-.top-bar-container::after {
+.top-bar-container::after,
+.train-hero::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -63,27 +63,6 @@ body {
     margin: 10px;
 }
 
-.train-hero {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    height: 625px;
-    min-height: 500px;
-    max-height: 800px;
-    overflow: hidden;
-    background: linear-gradient(135deg, #efece6 0%, #f5f1eb 100%);
-}
-
-.hero-text {
-    order: 2;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 10%;
-    padding-right: 5%;
-}
-
 .top-bar-links {
     list-style-type: none;
     font-size: large;
@@ -107,6 +86,26 @@ body {
     color: white;
 }
 
+.train-hero {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 625px;
+    min-height: 500px;
+    max-height: 800px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #efece6 0%, #f5f1eb 100%);
+}
+
+.hero-text {
+    order: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 5%;
+}
 
 .hero-text h2 {
     font-size: 1.5rem;
@@ -116,6 +115,7 @@ body {
     letter-spacing: 2px;
     animation: slideInLeft 0.8s ease-out 0.2s both;
 }
+
 .hero-text h3 {
     font-size: 1rem;
     color: #555;
@@ -133,8 +133,6 @@ body {
     width: fit-content;
 }
 
-
-
 .hero-image {
     order: 1;
     flex: 0 0 40%;
@@ -149,40 +147,39 @@ body {
     content: "";
     position: absolute;
     width: 420px;
-    height: 420px;
+    height: 500px;
     background: var(--marta-yellow);
-    opacity: 0.15;
-    border-radius: 3%;
-    z-index: 0;
+    opacity: 0.3;
+    border-radius: 8px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-5deg);
+    transform: translate(-50%, -50%) rotate(-0.5deg);
+    z-index: 0;
 }
 
-
 .hero-image img {
-  width: 100%;
-  height: auto;
-  max-width: 400px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), inset 0 0 0 2px var(--marta-blue);
-  transition: transform 0.4s ease, filter 0.4s ease;
-  position: relative;
-  z-index: 1;
-  border: 8px solid #f5f1eb;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), inset 0 0 0 2px var(--marta-blue);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    border-radius: 8px;
+    border: 8px solid #f5f1eb;
+    z-index: 1;
 }
 
 .hero-image img:hover {
     transform: scale(1.02) rotate(1deg);
 }
 
-.about-section {
-    padding: 5%;
+.info-section {
+    padding: 3%;
     background-color: #ffffff;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.about-section h2 {
+.info-section h2 {
     font-size: 2.5rem;
     color: var(--marta-black);
     font-weight: 700;
@@ -190,20 +187,64 @@ body {
     position: relative;
 }
 
-.about-section h2::after {
+#about h2::after,
+#some-more h2::after {
     content: "";
     display: block;
     width: 60px;
     height: 4px;
-    background: var(--marta-blue);
     margin-top: 15px;
 }
 
-.about-section p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 20px;
+#about h2::after {
+    background: var(--marta-orange);
+}
+
+#some-more h2::after {
+    background: var(--marta-blue);
+}
+
+.train-map-container {
+    display: flex;
+    background-color: var(--marta-grey);
+    height: 400px;
+    flex-direction: row;
+}
+
+.side-stuff {
+    display: flex;
+    order: 1;
+    gap: 3px;
+}
+
+.red-line {
+    background-color: var(--red-line);
+    height: fill;
+    width: 20px;
+}
+
+.yellow-line {
+    background-color: var(--gold-line);
+    height: fill;
+    width: 20px;
+}
+
+.train-map-circle {
+    width :40px;
+    height : 40px;
+    border-radius :50%;
+    border: solid 6px var(--marta-black);
+    outline: solid 2px var(--marta-grey);
+
+}
+
+.train-map-card-box {
+    flex-direction: column;
+    height: fill;
+    width: fill;
+    order: 2;
+    background-color: var(--green-line);
+
 }
 
 @keyframes slideInLeft {
@@ -225,7 +266,6 @@ body {
 
     .hero-image {
         order: 2;
-        flex: 0 0 auto;
         padding: 20px;
     }
 
@@ -240,7 +280,6 @@ body {
 
     .hero-text h2 {
         font-size: 1.2rem;
-        padding: 0;
     }
 
     .hero-image::before {
